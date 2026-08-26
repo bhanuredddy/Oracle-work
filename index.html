@@ -138,7 +138,7 @@ section{padding:6rem 3rem}
 .section-desc{font-size:1rem;color:var(--muted);max-width:500px;line-height:1.7;margin-bottom:3.5rem}
 
 #projects{background:var(--bg)}
-.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
 .project-card{
   background:var(--bg2);padding:2rem;transition:background .25s;cursor:default;position:relative;overflow:hidden;
 }
@@ -268,8 +268,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem;}
 <section id="projects">
   <div class="container">
     <p class="section-eyebrow reveal">What I built</p>
-    <h2 class="section-title reveal">Two platforms.<br>One mission.</h2>
-    <p class="section-desc reveal">End-to-end ownership across event-driven microservices, AI-powered risk systems, and Oracle 23ai Vector Search benchmarking.</p>
+    <h2 class="section-title reveal">Three platforms.<br>One mission.</h2>
+    <p class="section-desc reveal">End-to-end ownership across event-driven microservices, AI-powered risk systems, Oracle 23ai Vector Search, and high-availability Data Guard configurations.</p>
     <div class="projects-grid">
       <div class="project-card reveal">
         <div class="project-card-top">
@@ -287,7 +287,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem;}
         </div>
       </div>
 
-      <div class="project-card reveal reveal-delay-1">
+      <div class="project-card reveal reveal-delay-1" style="grid-column:span 1">
         <div class="project-card-top">
           <div class="project-icon">🧠</div>
           <span class="project-stack">Oracle 23ai · Vector AI</span>
@@ -301,6 +301,22 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem;}
           <div class="pf"><span class="pf-dot"></span>EAG pipeline — sub-100ms semantic retrieval</div>
           <div class="pf"><span class="pf-dot"></span>RAG vs EAG evaluation across 50+ sub-projects</div>
           <div class="pf"><span class="pf-dot"></span>Automated health checks — saved 3+ hours/day</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-card-top">
+          <div class="project-icon">🗄️</div>
+          <span class="project-stack">Oracle Data Guard · SQL Apply</span>
+        </div>
+        <div class="project-name">Oracle Logical Standby</div>
+        <div class="project-desc">Configured and operated Oracle Logical Standby using SQL Apply (LogMiner-based) — keeping the standby open for concurrent read/write reporting workloads while staying in sync with the primary.</div>
+        <div class="project-features">
+          <div class="pf"><span class="pf-dot"></span>SQL Apply via LogMiner — replayed redo logs on live standby</div>
+          <div class="pf"><span class="pf-dot"></span>Real-time Apply — reduced data lag to near-zero for live analytics</div>
+          <div class="pf"><span class="pf-dot"></span>Skip rules for high-churn tables — improved apply throughput at peak load</div>
+          <div class="pf"><span class="pf-dot"></span>Automated apply lag monitoring with threshold-based SLA alerts</div>
+          <div class="pf"><span class="pf-dot"></span>Switchover & failover drills — validated RTO and recovery procedures</div>
         </div>
       </div>
     </div>
