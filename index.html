@@ -66,7 +66,7 @@ nav{
   background:radial-gradient(circle,rgba(239,68,68,.1) 0%,transparent 70%);
   bottom:0;left:-50px;pointer-events:none;
 }
-.hero-content{position:relative;z-index:1;width:100%;}
+.hero-content{position:relative;z-index:1;width:55%;}
 .hero-intro{
   font-size:.85rem;color:rgba(180,200,240,0.75);
   max-width:100%;line-height:1.7;margin-bottom:1.5rem;
@@ -118,6 +118,25 @@ nav{
   background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
 .hstat-label{font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+
+.hero-db-wrap{
+  position:absolute;
+  right:3%;top:50%;transform:translateY(-50%);
+  width:42%;max-width:520px;
+  border-radius:50%;overflow:hidden;
+  opacity:0.55;
+  pointer-events:none;z-index:0;
+  box-shadow:0 0 80px rgba(249,115,22,0.25), 0 0 160px rgba(239,68,68,0.15);
+  animation:floatDb 5s ease-in-out infinite;
+}
+.hero-db-img{
+  width:100%;display:block;
+}
+@keyframes floatDb{
+  0%,100%{transform:translateY(-50%);}
+  50%{transform:translateY(calc(-50% - 14px));}
+}
+@media(max-width:768px){.hero-db-wrap{display:none;}}
 
 .scroll-hint{
   position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
@@ -227,6 +246,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem;}
   <canvas id="hero-canvas"></canvas>
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
+  <div class="hero-db-wrap"><img class="hero-db-img" src="images/oracle2.png" alt="Oracle Database"></div>
   <div class="hero-content">
     <p class="hero-intro">Oracle is one of the world's largest enterprise software and cloud computing companies, delivering mission-critical database, cloud, and application solutions to thousands of businesses globally. Oracle FLEXCUBE and Oracle 23ai represent the cutting edge of financial and AI-driven database technology.</p>
     <div class="hero-badge">
